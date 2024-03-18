@@ -1,0 +1,50 @@
+            .projects{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                height: 250px;
+                background-color: rgb(87, 87, 87);
+                height: 100%;
+            }
+
+            @media (max-width: 600px){
+                .projects{
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .project-item{
+                text-align: center;
+                background-color: rgb(87, 87, 87);
+                padding-top: 30px;
+                padding-bottom: 30px;
+                transition: 0.5s;
+            }
+
+            .project-item:hover{
+                background-color: rgb(40, 40, 40);
+            }
+
+            .project-title{
+                color: rgb(242, 242, 242);
+                font-size: 130%;
+                font-family: Josefin sans, 'Palatino';
+                font-weight: 500;
+            }
+
+            .project-icon{
+                width: 50%;
+                transition: 0.5s;
+                padding-bottom: 15px;
+            }
+
+            .project-icon:hover{
+                width: 60%;
+            }
+
+            .project-description{
+                color: rgb(242, 242, 242);
+                font-family: Josefin sans, 'Palatino';
+                font-weight: 300;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
