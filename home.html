@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+<head>
+    <title>{% block title %}Brandon Fourie{% endblock %}</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+{% block content %}
+
+    <div class="about" id="about">
+        <div>
+            <p class="about-heading"><a class="about-heading" href="/about">ABOUT ME</a></p>
+        </div>
+        <div>
+            <p class="about-description">Welcome to my website! My name is Brandon Fourie, and I am currently
+            pursuing a degree in Informatics at the University of South Africa. The following webpage is a
+            representation of myself as well as the various projects I have completed since my programming
+            journey began. <a class="about-redirect" href="/about">Click here</a> for a deeper dive into who I am.</p>
+        </div>
+    </div>
+
+    <div class="code">
+            <p class="code-text">PYTHON &#183; FLASK &#183; HTML &#183; CSS &#183; C++ &#183; Qt &#183; PyQt &#183; SQL</p>
+    </div>
+
+    <div class="projects">
+        <div class="project-item">
+            <p class="project-title">PyGame Project</p>
+            <img class="project-icon" src="{{url_for('static', filename='icons/game.svg')}}">
+            <p class="project-description">2Pong is my first python project that incorporated an external python
+            library, called Pygame, which required me to learn new modules and scopes outside the traditional standard library. </p>
+        </div>
+        <div class="project-item">
+            <p class="project-title">Login Web Project</p>
+            <img class="project-icon" src="{{url_for('static', filename='icons/login.svg')}}">
+            <p class="project-description">Flask is a lightweight framework that makes working with databases quick
+            and easy. In this project I used flask-sqlalchemy (sqlite) to create a database for user info to be stored. </p>
+        </div>
+        <div class="project-item">
+            <p class="project-title">To Do Web Project</p>
+            <img class="project-icon" src="{{url_for('static', filename='icons/to_do.svg')}}">
+            <p class="project-description">A to-do project that incorporates the same aspects as a login system but with
+            additional steps. A to-do application makes use of CRUD which allows it to be dynamic. </p>
+        </div>
+    </div>
+
+{% endblock %}
+
+</body>

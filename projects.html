@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+
+<head>
+
+    <style>
+        {% block style %}
+
+            .projects-subtitle-separate{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                background-color: rgb(242, 242, 242);
+                height: 50px;
+                margin: 0px;
+                font-family: Josefin sans, 'Palatino';
+                font-weight: 300;
+                font-size: 20px;
+                color: rgb(40, 40, 40);
+            }
+
+            .github{
+                font-family: Josefin sans, 'Palatino';
+                font-weight: 350;
+                font-size: 20px;
+                color: rgb(40, 40, 40);
+                transition: 0.75s;
+            }
+
+            .github:hover{
+                text-decoration: none;
+                color: black;
+                font-weight: 500;
+            }
+
+            .project-images{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(242, 242, 242);
+            }
+
+            .project-image-individual{
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            @media(max-width:800px){
+                .project-image-individual{
+                    max-width: 100vw;
+                    height: auto;
+                }
+
+                .project-image-individual2,
+                .project-image-individual3{
+                    max-width: 60vw;
+                    height: auto;
+                }
+            }
+
+            .project-images2{
+                display: grid;
+                grid-template-columns: 1fr;
+                justify-items: center;
+                align-items: center;
+                background-color: rgb(242, 242, 242);
+                padding-top: 50px;
+
+            }
+
+            .project-image-individual{
+                border-radius: 5px;
+            }
+
+            .project-image-individual2{
+                border-radius: 15px;
+                border: 2px solid rgb(40, 40, 40);
+                margin-bottom: 20px;
+            }
+
+            .project-image-individual3{
+                border-radius: 15px;
+                border: 2px dashed rgb(40, 40, 40);
+                margin-bottom: 20px;
+            }
+
+        {% endblock %}
+    </style>
+
+</head>
+<body>
+
+    {% block content %}
+
+        <div>
+            <p class="projects-subtitle-separate">To see more about my projects visit my&nbsp;
+                 <a class="github" href="https://github.com/Brolo231" target="_blank"> Github </a>
+            </p>
+        </div>
+
+    <div class="projects">
+        <div class="project-item">
+            <p class="project-title">PyGame Project</p>
+            <img class="project-icon" src="{{url_for('static', filename='icons/game.svg')}}">
+            <p class="project-description">2Pong is my first python project that incorporated an external python
+            library, called Pygame, which required me to learn new modules and scopes outside the traditional standard library. </p>
+        </div>
+        <div class="project-item">
+            <p class="project-title">Login Web Project</p>
+            <img class="project-icon" src="{{url_for('static', filename='icons/login.svg')}}">
+            <p class="project-description">Flask is a lightweight framework that makes working with databases quick
+            and easy. In this project I used flask-sqlalchemy (sqlite) to create a database for user info to be stored. </p>
+        </div>
+        <div class="project-item">
+            <p class="project-title">To Do Web Project</p>
+            <img class="project-icon" src="{{url_for('static', filename='icons/to_do.svg')}}">
+            <p class="project-description">A to-do project that incorporates the same aspects as a login system but with
+            additional steps. A to-do application makes use of CRUD which allows it to be dynamic. </p>
+        </div>
+    </div>
+
+    <div>
+        <p class="projects-subtitle-separate">Screenshots of some projects :]</p>
+    </div>
+
+    <div class="project-images">
+        <div>
+            <img class="project-image-individual" src="{{url_for('static', filename='images/PyGame.png')}}">
+        </div>
+    </div>
+
+    <div class="project-images2">
+        <div>
+            <img class="project-image-individual2" src="{{url_for('static', filename='images/Login.png')}}">
+        </div>
+        <div>
+            <img class="project-image-individual2" src="{{url_for('static', filename='images/Welcome.png')}}">
+        </div>
+    </div>
+
+    <div class="project-images2">
+        <div>
+            <img class="project-image-individual3" src="{{url_for('static', filename='images/ToDo.png')}}">
+        </div>
+    </div>
+
+    {% endblock %}
+
+</body>
